@@ -1,15 +1,11 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090812"><title>GAMEVOR</title><script src="https://telegram.org/js/telegram-web-app.js"></script><style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,sans-serif;background:radial-gradient(ellipse at 50% -15%,#291348,#090812 50%);color:#fff;min-height:100vh;padding:16px 14px 88px}header{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.logo{font-size:25px;font-weight:900;letter-spacing:1px}.logo span{color:#bd75ff;text-shadow:0 0 15px #a855f7}.profile{border:1px solid #65409a;background:#1b1630;border-radius:12px;padding:9px 12px;color:white}.hero{border:1px solid #713bb0;border-radius:17px;padding:17px;background:linear-gradient(115deg,#32125b,#17132b);margin-bottom:14px}.hero h1{font-size:21px;margin-bottom:7px}.hero p{font-size:12px;line-height:1.5;color:#d1c2e7}.sell-cta{width:100%;margin-top:13px;padding:14px;font-size:14px;box-shadow:0 5px 18px #8b35d566}.market-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}.market-heading .title{margin:0}.market-heading .primary{padding:10px 12px;font-size:12px;white-space:nowrap}.search{width:100%;padding:13px 14px;background:#151322;border:1px solid #39304e;border-radius:12px;color:white;outline:none;font-size:14px;margin-bottom:20px}.title{display:flex;justify-content:space-between;align-items:center;margin:0 1px 12px}.title h2{font-size:18px}.title small{color:#bb7cff;font-size:10px;letter-spacing:1px}.games{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:23px}.game{overflow:hidden;position:relative;border:1px solid #523276;border-radius:14px;aspect-ratio:1;background:#171326;cursor:pointer}.game.active{border:2px solid #c17aff;box-shadow:0 0 17px #a855f766}.game img{width:100%;height:100%;object-fit:cover;display:block}.label{position:absolute;bottom:0;left:0;right:0;padding:20px 4px 8px;text-align:center;font-weight:bold;font-size:11px;background:linear-gradient(transparent,#080711ef)}.market-tools{display:flex;gap:8px;margin:0 0 12px}.market-tools input,.market-tools select{min-width:0;width:50%;padding:11px;background:#151322;border:1px solid #39304e;border-radius:10px;color:#fff}.primary{border:0;border-radius:11px;padding:12px 15px;background:linear-gradient(100deg,#8b35d5,#bd75ff);color:#fff;font-weight:700}.listing-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}.listing{background:#171326;border:1px solid #493064;border-radius:13px;padding:12px;min-width:0}.listing h3{font-size:14px;margin-bottom:6px}.listing p{font-size:11px;color:#bdb4ce;line-height:1.5}.price{color:#d49aff;font-weight:800;font-size:16px;margin:8px 0}.listing button{width:100%;margin-top:8px}
-body.profile-open{padding:0;overflow:hidden}
-.profile-panel{display:none;position:fixed;inset:0;background:#090812;z-index:20;align-items:stretch;justify-content:stretch;padding:0;overflow:auto}
-.profile-panel.show{display:flex}
-.profile-card{width:100%;max-width:none;min-height:100vh;max-height:none;overflow:visible;background:radial-gradient(ellipse at 50% 0%,#291348,#090812 55%);border:0;border-radius:0;padding:22px 16px 100px}
-.profile-top{display:flex;align-items:center;gap:16px;margin-bottom:26px}.profile-top h2{margin:0}
-.tg-user{display:flex;align-items:center;gap:15px;padding:18px;background:#171326;border:1px solid #45335b;border-radius:16px}
-.tg-user img{width:76px;height:76px;border-radius:50%;object-fit:cover;background:#34234b}.tg-user p{color:#bdb4ce;margin-top:5px}
-.field-label{display:block;margin:12px 0 5px;color:#d8c9eb;font-size:13px}
-#sellGame,#sellPhoto,#sellPrice{width:100%;padding:12px;margin:6px 0;background:#0d0b17;border:1px solid #45335b;border-radius:9px;color:#fff}
-position:fixed;inset:0;background:#05040bdc;z-index:6;align-items:center;justify-content:center;padding:18px}.profile-panel.show{display:flex}.profile-card{width:100%;max-width:420px;max-height:85vh;overflow:auto;background:#171326;border:1px solid #7446a0;border-radius:17px;padding:18px}.profile-card h2{margin-bottom:12px}.profile-card input{width:100%;padding:12px;margin:6px 0;background:#0d0b17;border:1px solid #45335b;border-radius:9px;color:#fff}.profile-list{margin-top:12px}.my-item{background:#0e0c18;border:1px solid #403052;border-radius:10px;padding:10px;margin:8px 0}.my-item p{font-size:12px;color:#bdb4ce;margin:5px 0}.my-item button{margin:5px 5px 0 0;padding:8px 10px}.modal{display:none;position:fixed;inset:0;background:#05040bdc;z-index:5;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.box{width:100%;max-width:420px;background:#171326;border:1px solid #7446a0;border-radius:17px;padding:18px}.box h2{margin-bottom:12px}.box input,.box select,.box textarea{width:100%;padding:12px;margin:6px 0;background:#0d0b17;border:1px solid #45335b;border-radius:9px;color:#fff}.box textarea{min-height:65px;resize:vertical}.box .row{display:flex;gap:8px;margin-top:8px}.box .row button{flex:1}.muted{color:#aaa4bd;font-size:11px;margin-top:8px}.empty{background:#141222;border:1px solid #302545;border-radius:15px;padding:24px 15px;text-align:center}.icon{font-size:35px;margin-bottom:9px}.empty h3{font-size:15px;margin-bottom:7px}.empty p{font-size:12px;line-height:1.5;color:#aaa4bd}nav{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:space-around;background:#100e1cf5;border-top:1px solid #39264e;padding:10px 4px max(10px,env(safe-area-inset-bottom))}.nav{color:#938ba7;text-align:center;font-size:10px;cursor:pointer}.nav b{display:block;font-size:20px;margin-bottom:3px;font-weight:400}.nav.active{color:#c17aff}@media(min-width:600px){body{max-width:600px;margin:auto}}</style></head><body>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090812"><title>GAMEVOR</title><script src="https://telegram.org/js/telegram-web-app.js"></script>  <link rel="stylesheet" href="css/style.css">
+<style>
+.detail-gallery{display:flex;gap:8px;overflow-x:auto;padding:10px 0}
+.detail-gallery img{width:76px;height:64px;object-fit:cover;border-radius:9px;border:2px solid transparent;cursor:pointer;flex:0 0 auto}
+.detail-gallery img.active{border-color:#b66cff}
+</style>
+</head><body>
+<div id="backendStatus" class="backend-status" role="status">Подготовка GAMEVOR…</div>
 <header><div class="logo">GAME<span>VOR</span></div><button class="profile" onclick="openProfile()">👤 Профиль</button></header>
 <section class="hero"><h1>Игровой маркетплейс 🎮</h1><p>Покупай и продавай игровые аккаунты. Выбирай игру и находи аккаунт своей мечты!</p><button class="primary sell-cta" onclick="openSell()">＋ Продать аккаунт</button></section>
 <input class="search" id="search" placeholder="🔎 Найти игру в каталоге..." oninput="filterGames()">
@@ -29,10 +25,27 @@ position:fixed;inset:0;background:#05040bdc;z-index:6;align-items:center;justify
 <label class="field-label">Фото аккаунта * (обязательно)</label>
 <input id="sellPhoto" type="file" accept="image/*" required>
 <img id="sellPhotoPreview" style="display:none;width:100%;max-height:190px;object-fit:contain;border-radius:12px;margin:8px 0;background:#0c0a14">
+<label class="field-label">Дополнительные фотографии</label>
+<input id="sellExtraPhotos" type="file" accept="image/*" multiple>
+<small class="muted">Можно выбрать несколько фото. Каждое фото будет сжато перед сохранением.</small>
 <input id="sellPrice" type="number" min="1" placeholder="Цена (₽)" required>
 <textarea id="sellDesc" placeholder="Описание аккаунта: уровень, редкие предметы и т.д."></textarea>
+<textarea id="sellSpecs" placeholder="Характеристики: кубки, уровень, скины, карты и другие детали"></textarea>
 <div class="row"><button class="primary" onclick="addListing()">Опубликовать</button><button class="profile" onclick="closeSell()">Отмена</button></div>
 <p class="muted">Пока объявление сохраняется только на этом устройстве.</p></div></div>
+
+
+<div class="detail-panel" id="detailPanel"><div class="detail-wrap">
+<button class="profile" onclick="closeListing()" style="margin-bottom:15px">← Назад в каталог</button>
+<img id="detailPhoto" class="detail-photo" alt="Фото аккаунта">
+<div id="detailGallery" class="detail-gallery"></div>
+<h2 id="detailGame" style="margin-top:14px"></h2>
+<div id="detailPrice" class="detail-price"></div>
+<div id="detailDesc" class="detail-desc"></div>
+<div id="detailSpecs" class="detail-desc"></div>
+<p id="detailSeller" class="muted"></p>
+<div class="detail-actions"><button class="primary" id="detailContact">Связаться с продавцом</button><button class="profile" id="detailFav">♡ В избранное</button></div>
+</div></div>
 
 <div class="profile-panel" id="profilePanel"><div class="profile-card">
 <div class="profile-top"><button class="profile" onclick="closeProfile()">← Назад</button><h2>Мой профиль</h2></div>
@@ -40,28 +53,8 @@ position:fixed;inset:0;background:#05040bdc;z-index:6;align-items:center;justify
 <h3 style="margin-top:24px">📦 Мои объявления</h3><div id="myListings" class="profile-list"></div>
 </div></div>
 
-<nav><div class="nav active" onclick="tab(this,'Главная')"><b>⌂</b>Главная</div><div class="nav" onclick="tab(this,'Каталог')"><b>🎮</b>Каталог</div><div class="nav" onclick="tab(this,'Продать')"><b>＋</b>Продать</div><div class="nav" onclick="tab(this,'Профиль')"><b>♙</b>Профиль</div></nav>
-<script>const tg=window.Telegram?.WebApp;if(tg){tg.ready();tg.expand()}let selectedGame='';let listings=JSON.parse(localStorage.getItem('gamevor_listings')||'[]');
-function choose(e){document.querySelectorAll('.game').forEach(x=>x.classList.remove('active'));e.classList.add('active');selectedGame=e.dataset.name;document.getElementById('marketTitle').textContent='Аккаунты: '+selectedGame;renderListings();document.getElementById('listingGrid').scrollIntoView({behavior:'smooth',block:'start'});if(tg)tg.HapticFeedback?.impactOccurred('light')}
-function filterGames(){let q=document.getElementById('search').value.toLowerCase();document.querySelectorAll('.game').forEach(x=>x.style.display=x.dataset.name.toLowerCase().includes(q)?'block':'none')}
-function renderListings(){let q=document.getElementById('listingSearch').value.toLowerCase();let arr=listings.filter(x=>(!selectedGame||x.game===selectedGame)&&[x.game,x.desc].join(' ').toLowerCase().includes(q));let sort=document.getElementById('sortPrice').value;if(sort==='low')arr.sort((a,b)=>a.price-b.price);if(sort==='high')arr.sort((a,b)=>b.price-a.price);document.getElementById('listingGrid').innerHTML=arr.map(x=>`<article class="listing">${x.photo?`<img src="${x.photo}" style="width:100%;height:150px;object-fit:cover;border-radius:10px;margin-bottom:9px">`:''}<h3>${escapeHtml(x.game)}</h3><p>🎮 ${escapeHtml(x.game)}</p><div class="price">${x.price} ₽</div><p>${escapeHtml(x.desc||'Без описания')}</p><button class="primary" onclick="contactSeller('${encodeURIComponent(x.contact||'')}')">Связаться</button></article>`).join('');document.getElementById('marketEmpty').style.display=arr.length?'none':'block'}
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function openSell(){document.getElementById('sellModal').classList.add('show');if(selectedGame)document.getElementById('sellGame').value=selectedGame}
-function closeSell(){document.getElementById('sellModal').classList.remove('show')}
-document.addEventListener('change',e=>{if(e.target.id==='sellPhoto'){const f=e.target.files[0];if(!f)return;if(!f.type.startsWith('image/')){alert('Выбери изображение.');e.target.value='';return}if(f.size>5*1024*1024){alert('Фото должно быть меньше 5 МБ.');e.target.value='';return}const r=new FileReader();r.onload=()=>{document.getElementById('sellPhotoPreview').src=r.result;document.getElementById('sellPhotoPreview').style.display='block'};r.readAsDataURL(f)}});
-function addListing(){const game=document.getElementById('sellGame').value,price=Number(document.getElementById('sellPrice').value),desc=document.getElementById('sellDesc').value.trim(),file=document.getElementById('sellPhoto').files[0];const allowed=['Clash Royale','Free Fire','PUBG Mobile','Mobile Legends','Brawl Stars','eFootball'];if(!allowed.includes(game)){alert('Обязательно выбери одну из 6 игр.');return}if(!file){alert('Добавь фото аккаунта — это обязательно.');return}if(price<1){alert('Укажи цену в рублях.');return}const reader=new FileReader();reader.onload=()=>{const user=tg?.initDataUnsafe?.user;const contact=user?.username?'@'+user.username:'';listings.unshift({game,price,desc,contact,photo:reader.result,owner:user?.id||'local',created:Date.now()});try{localStorage.setItem('gamevor_listings',JSON.stringify(listings))}catch(e){alert('Фото слишком большое для сохранения. Выбери другое фото.');listings.shift();return}selectedGame=game;document.getElementById('marketTitle').textContent='Аккаунты: '+game;['sellPrice','sellDesc','sellPhoto'].forEach(id=>document.getElementById(id).value='');document.getElementById('sellPhotoPreview').style.display='none';closeSell();renderListings();alert('Объявление добавлено!')};reader.readAsDataURL(file)}
-function contactSeller(v){let c=decodeURIComponent(v);if(c.startsWith('@'))c=c.slice(1);if(c){let url='https://t.me/'+c;if(confirm('Открыть Telegram для связи с продавцом?'))window.open(url,'_blank')}}
-function tab(e,n){document.querySelectorAll('.nav').forEach(x=>x.classList.remove('active'));e.classList.add('active');if(n==='Продать'){openSell();return}if(n==='Каталог'){document.querySelector('.games').scrollIntoView({behavior:'smooth'});return}if(n==='Профиль'){openProfile();return}window.scrollTo({top:0,behavior:'smooth'})}
-
-function openProfile(){const user=tg?.initDataUnsafe?.user;document.getElementById('tgName').textContent=user?(user.first_name+(user.last_name?' '+user.last_name:'')):'Открой GAMEVOR внутри Telegram';document.getElementById('tgUsername').textContent=user?.username?'@'+user.username:(user?'Имя пользователя Telegram не указано':'Фото и ник доступны при запуске через Telegram');document.getElementById('tgAvatar').src=user?.photo_url||'';document.getElementById('tgAvatar').style.display=user?.photo_url?'block':'none';renderMyListings();document.getElementById('profilePanel').classList.add('show');document.body.classList.add('profile-open')}
-function closeProfile(){document.getElementById('profilePanel').classList.remove('show');document.body.classList.remove('profile-open')}
-function renderMyListings(){const box=document.getElementById('myListings');const user=tg?.initDataUnsafe?.user;const mine=listings.map((x,i)=>({x,i})).filter(o=>!user||o.x.owner===user.id||(!o.x.owner&&o.x.contact&&o.x.contact==='@'+(user.username||'')));if(!mine.length){box.innerHTML='<p class="muted">У тебя пока нет объявлений.</p>';return}box.innerHTML=mine.map(({x,i})=>`<div class="my-item">${x.photo?`<img src="${x.photo}" style="width:100%;max-height:160px;object-fit:cover;border-radius:10px">`:''}<b>${escapeHtml(x.game)}</b><p>${x.price} ₽</p><p>${escapeHtml(x.desc||'Без описания')}</p><button class="primary" onclick="editMyListing(${i})">✏️ Редактировать</button> <button class="profile" onclick="deleteMyListing(${i})">🗑 Удалить</button></div>`).join('')}
-function editMyListing(i){const x=listings[i];if(!x)return;const price=prompt('Новая цена в рублях:',x.price);if(price===null)return;const desc=prompt('Новое описание:',x.desc||'');if(desc===null)return;if(Number(price)<1){alert('Укажи корректную цену.');return}listings[i]={...x,price:Number(price),desc:desc.trim()};localStorage.setItem('gamevor_listings',JSON.stringify(listings));renderMyListings();renderListings()}
-function deleteMyListing(i){
- if(!listings[i])return;
- if(!confirm('Удалить это объявление?'))return;
- listings.splice(i,1);localStorage.setItem('gamevor_listings',JSON.stringify(listings));
- renderMyListings();renderListings();
-}
-
-renderListings();</script></body></html>
+<nav><div class="nav active" onclick="tab(this,'Главная')"><b>⌂</b>Главная</div><div class="nav" onclick="location.href='pages/catalog.html'"><b>🎮</b>Каталог</div><div class="nav" onclick="location.href='pages/chats.html'"><b>💬</b>Чаты</div><div class="nav" onclick="tab(this,'Профиль')"><b>♙</b>Профиль</div></nav>
+  <script src="js/config.js"></script>
+  <script src="js/backend.js"></script>
+  <script src="js/app.js"></script>
+</body></html>
